@@ -5,7 +5,7 @@ metadata:
   title: My Simple Template
   description: Simple template demo
 spec:
-  owner: default/team-a
+  owner: ilhamdwik
   type: service
   parameters:
     - title: Info
