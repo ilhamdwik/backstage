@@ -1,0 +1,27 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: my-simple-template
+  title: My Simple Template
+  description: Simple template demo
+spec:
+  owner: default/team-a
+  type: service
+  parameters:
+    - title: Info
+      required: [name]
+      properties:
+        name:
+          type: string
+          description: Service name
+  steps:
+    - id: fetch
+      name: Fetch skeleton
+      action: fetch:template
+      input:
+        url: ./skeleton
+    - id: done
+      name: Done
+      action: log:info
+      input:
+        message: "Created {{ parameters.name }}"
